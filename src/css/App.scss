@@ -1,0 +1,9 @@
+@import './config';
+
+.container {
+    width: $container-width;
+    height: $container-height;
+    background-color: $container-background-color;
+
+    @include flex-box(column, nowrap, center, center, none, none, none, 0);
+}
