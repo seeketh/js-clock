@@ -1,5 +1,5 @@
+import { Clock } from './components/Clock';
 import './css/App.scss';
-import { Clock } from './components';
 
 // The App container
 function App() {

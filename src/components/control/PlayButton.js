@@ -2,13 +2,12 @@
 import { IoPlay, IoPause } from 'react-icons/io5';
 
 
-function PlayButton({isActive, setIsActive, setIsReset, addSessionChanges, addBreakChanges}) {
+function PlayButton({isActive, setIsActive, isReset, addSessionChanges, addBreakChanges}) {
 
     function handlePlayPause() {
         setIsActive(currentState => !currentState);
+        console.log('PP clicked - was reset active?: ', isReset);
         
-        setIsReset(false); // It was not a reset if play/pause was clicked.
-        console.log('reset is false')
         addSessionChanges(0); // Reset the count of changed made before this play/pause.
         addBreakChanges(0); // Reset the count of changed made before this play/pause.
 

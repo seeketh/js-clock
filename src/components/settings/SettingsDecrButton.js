@@ -4,7 +4,9 @@ import { IoCaretDown } from 'react-icons/io5';
 function SettingsDecrButton({decrFunction, lowerBound, isActive, addChangesFn, btnType}) {
     
     const handleClick = () => {
+        console.log("decr rec");
         if (! isActive) {
+            console.log("decr exec");
             decrFunction(currentCount => {
 
                 if (currentCount > lowerBound.current) {
